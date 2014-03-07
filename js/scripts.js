@@ -102,6 +102,15 @@ var World = {
 $(document).ready(function() {
   World.populate();
 
+  $("img#glider").click(function() {
+    var gliders = [2,33,63,61,62];
+    gliders.forEach(function(glider) {
+      World.population[glider].state = true;
+      console.log(World.population[glider].state);
+      $("td#"+glider).toggleClass('black white');
+    });  
+  });
+
   for(var i = 0; i < 30; i++) {
     $("table#world-table").append("<tr></tr>")
     for(var j = 0; j < 30; j++) {

@@ -1,13 +1,18 @@
+body {
+  background-color:   #5C0099;
+  color: white;
+}
+
 table {
   border: 1px solid black;
   text-align: center;
-  margin: auto;
 }
 
 td {
   height: 15px;
   width: 15px;
   border: 1px solid black;
+  opacity: .25;
 }
 
 .black {
@@ -17,11 +22,23 @@ td {
 .white {
   background-color: white;
 }
-.green {
-  background-color: green;
+
+.purple {
+  background-color:   #5C0099;
 }
 
-#main {
-  text-align: center;
+
+img#glider {
+  vertical-align: center;
   margin: auto;
+  margin-top: 100px;
 }
+
+img:hover {
+  cursor: pointer;
+}
+button {
+  margin-top: 100px;
+}
+
+
