@@ -106,7 +106,7 @@ $(document).ready(function() {
     var gliders = [2,33,63,61,62];
     gliders.forEach(function(glider) {
       World.population[glider].state = true;
-      console.log(World.population[glider].state);
+      
       $("td#"+glider).toggleClass('black white');
     });  
   });
@@ -143,7 +143,7 @@ $(document).ready(function() {
         } 
         //cell.makeDeadorAlive();
       });
-      console.log('cycle')
+
     }, 100);
 
 
