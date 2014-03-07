@@ -31,14 +31,15 @@ td {
 img#glider {
   vertical-align: center;
   margin: auto;
-  margin-top: 100px;
+}
+img#gun {
+  margin: auto;
+  vertical-align: center;
 }
 
 img:hover {
   cursor: pointer;
 }
-button {
-  margin-top: 100px;
-}
+
 
 

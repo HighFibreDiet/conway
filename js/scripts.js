@@ -102,11 +102,18 @@ var World = {
 $(document).ready(function() {
   World.populate();
 
+  $("img#gun").click(function() {
+    var guns = [151, 152, 181, 182, 98, 99, 127, 156, 186, 216, 247, 278, 279, 190, 131, 162, 192, 222, 193, 106, 107, 136, 137, 166, 167, 78, 198, 50, 80, 200, 230, 118, 117, 148, 147, 251];
+    guns.forEach(function(gun){
+      World.population[gun].state = true;
+      $("td#"+gun).toggleClass('black white');
+    })
+  })
+
   $("img#glider").click(function() {
     var gliders = [2,33,63,61,62];
     gliders.forEach(function(glider) {
       World.population[glider].state = true;
-      
       $("td#"+glider).toggleClass('black white');
     });  
   });
@@ -125,7 +132,7 @@ $(document).ready(function() {
   });
 
   $('button#run-button').click(function() {
-    setInterval(function() {
+    var interval = setInterval(function() {
       World.population.forEach(function(cell) {
         cell.setFutureState();
       });
@@ -146,6 +153,9 @@ $(document).ready(function() {
 
     }, 100);
 
+    $("button#stop-button").click(function() {
+        clearInterval(interval);
+    });
 
   });
 
